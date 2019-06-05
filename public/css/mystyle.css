@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Righteous|Roboto+Condensed|Ubuntu');
+
+html,body{
+    height: 100vh;
+    width: 100vw;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.parallax{
+    height: 30vw;
+    background-image: url('../Images/liq.png');
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+    color: white;
+    display:flex;
+    align-items: center;
+
+}
+
+.nav-link{
+    padding: 20px;
+}
