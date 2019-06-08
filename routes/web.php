@@ -12,5 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('admin.index');
 });
+
+// {{--  Route::resource('/contact', 'ContactController');}}
+
+Route::resource('/contact', 'ContactController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

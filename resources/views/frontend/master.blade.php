@@ -20,7 +20,7 @@
 </head>
 
 {{-- scrop spy reference -> https://www.w3schools.com/bootstrap4/bootstrap_scrollspy.asp   --}}
-<body data-spy="scroll" data-target="#navbarResponsive" data-offset="50">
+<body>
         <!-- Start header -->
         <header>
 

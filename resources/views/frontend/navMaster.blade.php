@@ -1,6 +1,6 @@
 {{-- Start navication  --}}
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-md navbar-light bg-light">
     <!-- Brand -->
     <a class="navbar-brand" href="{{ url('/')}}">
         <img src="{{ url('../Images/Logo.png') }}" alt="Logo" style="width:40px;"> BICT
@@ -15,7 +15,7 @@
             <!-- Links -->
             <ul class="navbar-nav ml-auto bg-transperent">
                 <li class="nav-item">
-                <a class="nav-link" href="#home">Home</a>
+                <a class="nav-link" href="{{ url('/')}}">Home</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="#About">About</a>
@@ -24,7 +24,7 @@
                 <a class="nav-link" href="#feature">Courses</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#Contact">Contact us</a>
+                <a class="nav-link" href="{{ url('contact')  }}">Contact us</a>
                 </li>
 
                 <li class="nav-item">
