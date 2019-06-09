@@ -1,4 +1,7 @@
- {{-- Copyright by Nuzrath
+ {{--
+    this is for frond end WEBSITE-  MASTER PAGE Desing
+
+    Copyright by Nuzrath
     this site created for the bit final project --}}
 
 <!DOCTYPE html>
