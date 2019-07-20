@@ -14,10 +14,10 @@
                                         <a href="{{ url('/') }}">Home</a>
                                     </LI>
                                     <LI>
-                                        <a href="#">About us</a>
+                                        <a href="#About">About us</a>
                                     </LI>
                                     <LI>
-                                        <a href="#">Contact us</a>
+                                        <a href="{{ url('/contact')  }}">Contact us</a>
                                     </LI>
                                     <LI>
                                         <a href="#">Verification</a>

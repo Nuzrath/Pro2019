@@ -24,12 +24,16 @@
                 <a class="nav-link" href="#feature">Courses</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="{{ url('contact')  }}">Contact us</a>
+                <a class="nav-link" href="{{ url('/contact')  }}">Contact us</a>
                 </li>
 
                 <li class="nav-item">
                 <a class="nav-link" href="#">Verfication</a>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/admin')  }}">Admin Panel</a>
+                    </li>
                 <!-- Dropdown -->
                 <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -37,7 +41,7 @@
                 </a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="#">Teacher</a>
-                    <a class="dropdown-item" href="#">Admin</a>
+                    <a class="dropdown-item" href="{{ url('/admin')  }}">Admin</a>
                     <a class="dropdown-item" href="#">Student</a>
                 </div>
                 </li>

@@ -1,5 +1,10 @@
 <?php
 
+use App\User;
+use App\Role;
+use App\Subject;
+use App\Staff;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +17,7 @@
 */
 
 Route::get('/', function () {
-    return view('admin.index');
+    return view('index');
 });
 
 // {{--  Route::resource('/contact', 'ContactController');}}
@@ -22,3 +27,21 @@ Route::resource('/contact', 'ContactController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/admin','AdminController@index');
+
+// Route::get('/user/{$id)/role', function($id){
+//     return User::find($id)->Role;
+// });
+
+
+Route::get('/staff/{staff}/subject', function($id){
+
+    $staff = Staff::find($id);
+
+    foreach ($staff->subjects as $subject) {
+
+        echo $subject->name ."<br/>";
+    }
+
+});
