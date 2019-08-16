@@ -1,61 +1,74 @@
-@extends('layouts.admin')
+  @extends('layouts.admin')
 
-@section('title', 'Dashboard')
+  @section('title', 'Dashboard')
 
 
 
-@section('content')
 
-<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-      <h1 class="h2">BICT Acadamic Summery</h1>
-      <div class="btn-toolbar mb-2 mb-md-0">
-        <div class="btn-group mr-2">
-          <button class="btn btn-sm btn-outline-secondary">Share</button>
-          <button class="btn btn-sm btn-outline-secondary">Export</button>
+    @section('content')
+
+    <div class="container">
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-8 ">
+                    <div class="card">
+                        <div class="card-header">ADMIN Dashboard</div>
+
+                        <div class="card-body">
+                            @if (session('status'))
+                                <div class="alert alert-success" role="alert">
+                                    {{ session('status') }}
+                                </div>
+                            @endif
+
+
+                               <h2> STAFF </h2>
+                               <a name="" id="" class="btn btn-primary" href="{{ route('staff.index')  }}" role="button"> Staff list</a>
+                               <a name="" id="" class="btn btn-primary" href="{{ route('staff.create')  }}" role="button"> Create Staff </a>
+                               <a name="" id="" class="btn btn-primary" href="#" role="button"> Edit Staff </a>
+                               <a name="" id="" class="btn btn-primary" href="#" role="button"> Delete Staff </a>
+
+                               <br>
+                               <br>
+
+                               <h2> SUBJECT </h2>
+                               <a name="" id="" class="btn btn-primary" href="{{ url('/subject') }}" role="button"> Create Subject </a>
+                               <a name="" id="" class="btn btn-primary" href="#" role="button"> Edit Subject </a>
+                               <a name="" id="" class="btn btn-primary" href="#" role="button"> Delete Subject </a>
+
+                               <br>
+                               <br>
+
+                               <h2> STUDENT </h2>
+                               <a name="" id="" class="btn btn-primary" href="#" role="button"> Create Student </a>
+                               <a name="" id="" class="btn btn-primary" href="#" role="button"> Edit Student </a>
+                               <a name="" id="" class="btn btn-primary" href="#" role="button"> Delete Studnet </a>
+
+                               <br>
+                               <br>
+
+                               <h2> COURSE </h2>
+                               <a name="" id="" class="btn btn-primary" href="#" role="button"> Create Course </a>
+                               <a name="" id="" class="btn btn-primary" href="#" role="button"> Edit Course </a>
+                               <a name="" id="" class="btn btn-primary" href="#" role="button"> Delete Course </a>
+
+                               <br>
+                               <br>
+
+                               <h2> COURSE </h2>
+                               <a name="" id="" class="btn btn-primary" href="#" role="button"> Create Course </a>
+                               <a name="" id="" class="btn btn-primary" href="#" role="button"> Edit Course </a>
+                               <a name="" id="" class="btn btn-primary" href="#" role="button"> Delete Course </a>
+
+                               <br>
+                               <br>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
-          <span data-feather="calendar"></span>
-          This week
-        </button>
-      </div>
-    </div>
-
-    <canvas class="my-4" id="myChart" width="900" height="380"></canvas>
-
-    <h2>Section title</h2>
-    <div class="table-responsive">
-      <table class="table table-striped table-sm">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Header</th>
-            <th>Header</th>
-            <th>Header</th>
-            <th>Header</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1,001</td>
-            <td>Lorem</td>
-            <td>ipsum</td>
-            <td>dolor</td>
-            <td>sit</td>
-          </tr>
-          <tr>
-            <td>1,002</td>
-            <td>amet</td>
-            <td>consectetur</td>
-            <td>adipiscing</td>
-            <td>elit</td>
-          </tr>
 
 
-        </tbody>
-      </table>
-    </div>
-  </main>
 
 
-@stop

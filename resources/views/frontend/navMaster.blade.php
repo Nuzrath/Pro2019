@@ -3,7 +3,7 @@
 <nav class="navbar navbar-expand-md navbar-light bg-light">
     <!-- Brand -->
     <a class="navbar-brand" href="{{ url('/')}}">
-        <img src="{{ url('../Images/Logo.png') }}" alt="Logo" style="width:40px;"> BICT
+        <img src="{{   url('Images\logo.png')    }}" alt="Logo" style="width:40px;"> BICT
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponse">
           <span class="navbar-toggler-icon"></span>
@@ -41,7 +41,7 @@
                 </a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="#">Teacher</a>
-                    <a class="dropdown-item" href="{{ url('/admin')  }}">Admin</a>
+                    <a class="dropdown-item" href="{{    url('/admin')  }}">Admin</a>
                     <a class="dropdown-item" href="#">Student</a>
                 </div>
                 </li>

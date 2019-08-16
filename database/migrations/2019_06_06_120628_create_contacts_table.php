@@ -20,7 +20,6 @@ class CreateContactsTable extends Migration
             $table->integer('contact_no')->index();
             $table->string('course');
             $table->longText('comment')->nullable();
-            $table->boolean('status');
             $table->timestamps();
         });
     }

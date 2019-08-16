@@ -24,6 +24,12 @@ Route::get('/', function () {
 
 Route::resource('/contact', 'ContactController');
 
+
+Route::resource('/staff', 'StaffController');
+
+
+Route::resource('/subject', 'SubjectController');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

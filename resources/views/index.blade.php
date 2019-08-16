@@ -19,7 +19,7 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="d-block w-100" src="{{ url('../Images/Business.jpg') }}" alt="First slide">
+            <img class="d-block w-100" src="{{ url('Images/Business.jpg') }}" alt="First slide">
             <div class="carousel-caption">
                 <h3 class="display-3">Choose BICT</h3>
                     <p class="lead">We are waiting to build your career More info... </p>
@@ -30,14 +30,14 @@
               </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="{{ url('../Images/Footer.png')}}" alt="Second slide">
+            <img class="d-block w-100" src="{{ url('Images/Footer.png')}}" alt="Second slide">
             <div class="carousel-caption">
                 <h5>Second slide label</h5>
                 <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
               </div>
           </div>
           <div class="carousel-item">
-            <img  class="d-block w-100" src="{{url('../Images/success.jpg')}}" alt="Third slide">
+            <img  class="d-block w-100" src="{{url('Images/success.jpg')}}" alt="Third slide">
             <div class="carousel-caption">
                 <h5>Third slide label</h5>
                 <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -144,7 +144,7 @@
 
         </div>
         <div class="col-6" mt-3>
-           <img src="{{ url('../Images/tvec.png')}}" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+           <img src="{{ url('Images/tvec.png')}}" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
         </div>
     </div>
 </div>

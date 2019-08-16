@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Staff;
+use App\User;
+use App\Role;
+
+
 class StaffController extends Controller
 {
     /**
@@ -13,7 +18,9 @@ class StaffController extends Controller
      */
     public function index()
     {
-        //
+        //staff Details available here
+        $staffs=Staff::all();
+        return view('staffs.index', compact('staffs'));
     }
 
     /**
@@ -23,7 +30,9 @@ class StaffController extends Controller
      */
     public function create()
     {
-        //
+        $roles =Role::pluck ('name','id')->all();
+		return view('staffs.create',compact('roles'));
+
     }
 
     /**
@@ -35,6 +44,7 @@ class StaffController extends Controller
     public function store(Request $request)
     {
         //
+        $input=$request->all();
     }
 
     /**
