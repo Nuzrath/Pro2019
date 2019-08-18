@@ -31,24 +31,24 @@
                                <br>
 
                                <h2> SUBJECT </h2>
-                               <a name="" id="" class="btn btn-primary" href="{{ url('/subject') }}" role="button"> Create Subject </a>
-                               <a name="" id="" class="btn btn-primary" href="#" role="button"> Edit Subject </a>
+                               <a name="" id="" class="btn btn-primary" href="{{ route('subject.index')  }}" role="button"> Subject List</a>
+                               <a name="" id="" class="btn btn-primary" href="{{ route('subject.create')  }}" role="button"> Create Subject </a>
                                <a name="" id="" class="btn btn-primary" href="#" role="button"> Delete Subject </a>
 
                                <br>
                                <br>
 
                                <h2> STUDENT </h2>
-                               <a name="" id="" class="btn btn-primary" href="#" role="button"> Create Student </a>
-                               <a name="" id="" class="btn btn-primary" href="#" role="button"> Edit Student </a>
+                               <a name="" id="" class="btn btn-primary" href="{{ route('student.index')  }}" role="button"> Student List </a>
+                               <a name="" id="" class="btn btn-primary" href="{{ route('student.create')  }}" role="button"> Create Student </a>
                                <a name="" id="" class="btn btn-primary" href="#" role="button"> Delete Studnet </a>
 
                                <br>
                                <br>
 
                                <h2> COURSE </h2>
-                               <a name="" id="" class="btn btn-primary" href="#" role="button"> Create Course </a>
-                               <a name="" id="" class="btn btn-primary" href="#" role="button"> Edit Course </a>
+                               <a name="" id="" class="btn btn-primary" href="{{ route('course.index')  }}" role="button"> Course List </a>
+                               <a name="" id="" class="btn btn-primary" href="{{ route('course.create')  }}" role="button"> Create Course </a>
                                <a name="" id="" class="btn btn-primary" href="#" role="button"> Delete Course </a>
 
                                <br>

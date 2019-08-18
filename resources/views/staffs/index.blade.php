@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Staff Index')
+@section('title', 'Staff List - admin view')
 
 @section('content')
 
@@ -28,18 +28,17 @@
                       <thead>
                         <tr>
                           <th>Staff ID</th>
-                          <th>First Name</th>
-                          <th>Last Name</th>
+                          <th>Full Name</th>
                           <th>Address</th>
-                          <th>Country</th>
-                          <th>Date of Birth</th>
-                          <th>Contact 1</th>
-                          <th>Contact 2</th>
+                          <th>E-Mail</th>
+                          {{-- <th>Date of Birth</th> --}}
+                          <th>Mobile</th>
+                          {{-- <th>Home</th> --}}
                           <th>NIC/ Passport</th>
                           <th>Gender</th>
-                          <th>Qualification</th>
+                          {{-- <th>Qualification</th> --}}
                           <th>is active</th>
-                          <th>Staff Pic</th>
+                          {{-- <th>Staff Pic</th> --}}
                           <th>Role </th>
                           <th>Created At</th>
                           <th>Updated</th>
@@ -54,21 +53,28 @@
 
 
                       <tbody>
-                        <tr>
-                          <td>John</td>
-                          <td>Doe</td>
-                          <td>john@example.com</td>
-                        </tr>
-                        <tr>
-                          <td>Mary</td>
-                          <td>Moe</td>
-                          <td>mary@example.com</td>
-                        </tr>
-                        <tr>
-                          <td>July</td>
-                          <td>Dooley</td>
-                          <td>july@example.com</td>
-                        </tr>
+                        @if($staffs)
+                            @foreach($staffs as $staff)
+                            <tr>
+                            <td>{{$staff->staff_id}}</td>
+                            <td><a href="{{ route('staff.edit', $staff->staff_id)}}">{{$staff->fname . " " .$staff->lname}}</a></td>
+                            <td>{{$staff->address .", " .$staff->country}}</td>
+                            <td>{{$staff->email}}</td>
+                            {{-- <td>{{$staff->dob}}</td> --}}
+                            <td>{{$staff->contact1}}</td>
+                            <td>{{ $staff->nic_no }}</td>
+                            {{-- <td>{{ $staff->nic_no ? $staff->nic_no : $staff->passport_no}}</td> --}}
+                            <td>{{$staff->gender}}</td>
+                            <td>{{$staff->is_active==0?"Not Active":"Active"}} </td>
+                            <td>{{$staff->role->name}}</td>
+                            <td>{{$staff->created_at }} </td>
+                                {{-- ->format('d/m/y')}}</td> --}}
+                            <td>{{$staff->updated_at }}  </td>
+                                {{-- ->diffForHumans()}}</td> --}}
+
+                            @endforeach
+                            @endif
+                            </tr>
                       </tbody>
                     </table>
                     {{--  panel body end  --}}

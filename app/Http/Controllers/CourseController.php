@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Subject;
+use App\Course;
 
-class SubjectController extends Controller
+class CourseController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +14,9 @@ class SubjectController extends Controller
      */
     public function index()
     {
-        //
-         //Subject Details available here
-         $subjects=Subject::all();
-         return view('subjects.index', compact('subjects'));
+          //Course Details available here
+          $courses=Course::all();
+          return view('courses.index', compact('courses'));
     }
 
     /**

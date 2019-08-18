@@ -25,8 +25,13 @@ Route::get('/', function () {
 Route::resource('/contact', 'ContactController');
 
 
+Route::resource('/course', 'CourseController');
+
+
 Route::resource('/staff', 'StaffController');
 
+
+Route::resource('/student', 'StudentController');
 
 Route::resource('/subject', 'SubjectController');
 
