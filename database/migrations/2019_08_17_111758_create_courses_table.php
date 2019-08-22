@@ -15,7 +15,7 @@ class CreateCoursesTable extends Migration
     {
         Schema::create('courses', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('course_id')->index()->unique();
+            $table->String('course_id')->index()->unique();
             $table->string('course_name');
             $table->decimal('course_fee',8,2);
             $table->string('duration');  //4 month, 12 Days,..etc
