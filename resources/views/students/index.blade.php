@@ -16,7 +16,7 @@
                 {{--  panel default start  --}}
 
                 <div class="panel panel-heading">
-                    <h3>Staff List</h3>
+                    <h3>Student List</h3>
 
                 </div>
 

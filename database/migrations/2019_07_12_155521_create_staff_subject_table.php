@@ -14,9 +14,12 @@ class CreateStaffSubjectTable extends Migration
     public function up()
     {
         Schema::create('staff_subject', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('staff_id');
-            $table->integer('subject_id');
+
+            $table->integer('staff_id')->unsigned();
+            $table->foreign('staff_id')->references('id')->on('staffs');
+
+            $table->integer('subject_id')->unsigned();
+            $table->foreign('subject_id')->references('id')->on('subjects');
             $table->timestamps();
         });
     }

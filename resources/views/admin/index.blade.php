@@ -54,10 +54,18 @@
                                <br>
                                <br>
 
-                               <h2> COURSE </h2>
-                               <a name="" id="" class="btn btn-primary" href="#" role="button"> Create Course </a>
+                               <h2> CLASS ROOM</h2>
+                               <a name="" id="" class="btn btn-primary" href="{{ route('classroom.index')}}" role="button"> Class Room List </a>
                                <a name="" id="" class="btn btn-primary" href="#" role="button"> Edit Course </a>
                                <a name="" id="" class="btn btn-primary" href="#" role="button"> Delete Course </a>
+
+                               <br>
+                               <br>
+
+                               <h2> Reciept</h2>
+                               <a name="" id="" class="btn btn-primary" href="#" role="button"> Receipt List </a>
+                               <a name="" id="" class="btn btn-primary" href="#" role="button"> Create Reciept </a>
+                               <a name="" id="" class="btn btn-primary" href="#" role="button"> Delete Reciept</a>
 
                                <br>
                                <br>

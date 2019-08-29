@@ -27,6 +27,7 @@ Route::resource('/contact', 'ContactController');
 
 Route::resource('/course', 'CourseController');
 
+Route::resource('/classroom', 'RoomController');
 
 Route::resource('/staff', 'StaffController');
 
