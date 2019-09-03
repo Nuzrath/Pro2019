@@ -23,7 +23,7 @@
                     <div class="panel panel-body">
                         {{--  panel Body working space start  --}}
 
-                        <p>Staff Details table</p>
+                        <p>Class Room Details table</p>
                         <table class="table">
                           <thead>
                             <tr>

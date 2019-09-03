@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use App\Course;
+
+use App\Http\Requests\CourseRequest;
+
 
 class CourseController extends Controller
 {
@@ -27,6 +31,7 @@ class CourseController extends Controller
     public function create()
     {
         //
+        return view('courses.create');
     }
 
     /**
@@ -35,9 +40,24 @@ class CourseController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CourseRequest $request)
     {
         //
+         //return $request->all(); //1st check success sending information
+        //  $input =$request->all(); nother way
+
+      $courses = new Course;
+
+      $courses->course_id = $request->input('course_id');
+      $courses->course_name = $request->input('course_name');
+      $courses->course_fee  = $request->input('course_fee');
+      $courses->duration  = $request->input('duration');
+      $courses->admission_fee  = $request->input('admission_fee');
+
+      $courses->save();
+
+      return redirect(route('course.index'))->with('response','successfully added Course');
+
     }
 
     /**

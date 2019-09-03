@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-
+@section('title', 'Staff Create Form')
 
 @section('content')
 <div class="container-fluid" >
@@ -29,7 +29,7 @@
                 <div class="panel-heading">Staff Register</div>
 
                 <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ url('staff.store') }}" style="-webkit-margin-bottom-collapse: 50px;margin-top='120px;';">
+                    <form class="form-horizontal" method="POST" action="{{ route('staff.store') }}" style="-webkit-margin-bottom-collapse: 50px;margin-top='120px;';">
                         {{ csrf_field() }}
 <!-- This is my work-->
 
@@ -133,10 +133,10 @@
 
 <!-- NIC No-->
                         <div class="form-group">
-							<label for="nic" class="col-md-4 control-label">National ID No:</label>
+							<label for="nic_no" class="col-md-4 control-label">National ID No:</label>
 
 							<div class="col-md-6">
-							<input id="nic" type="textbox" class="form-control" name="nic" placeholder="xxxxxxxxxxxxxV" value="55555555555V">
+							<input id="nic_no" type="textbox" class="form-control" name="nic_no" placeholder="xxxxxxxxxxxxxV" value="55555555555V">
 							</div>
 						</div>
 

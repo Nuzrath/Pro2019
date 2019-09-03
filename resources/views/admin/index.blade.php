@@ -56,7 +56,7 @@
 
                                <h2> CLASS ROOM</h2>
                                <a name="" id="" class="btn btn-primary" href="{{ route('classroom.index')}}" role="button"> Class Room List </a>
-                               <a name="" id="" class="btn btn-primary" href="#" role="button"> Edit Course </a>
+                               <a name="" id="" class="btn btn-primary" href="{{ route('classroom.create')  }}" role="button"> Create Class Room </a>
                                <a name="" id="" class="btn btn-primary" href="#" role="button"> Delete Course </a>
 
                                <br>

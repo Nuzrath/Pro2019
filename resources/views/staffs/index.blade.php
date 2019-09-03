@@ -11,6 +11,7 @@
 
         <div class="col-md-12 mx-auto mt-5">
             {{--  col md start  --}}
+            {{--  @include('inc.form_error')  --}}
 
             <div class="panel panel-default">
                 {{--  panel default start  --}}
@@ -36,7 +37,7 @@
                           {{-- <th>Home</th> --}}
                           <th>NIC/ Passport</th>
                           <th>Gender</th>
-                          {{-- <th>Qualification</th> --}}
+                            <th>Qualification</th>
                           <th>is active</th>
                           {{-- <th>Staff Pic</th> --}}
                           <th>Role </th>
@@ -65,6 +66,7 @@
                             <td>{{ $staff->nic_no }}</td>
                             {{-- <td>{{ $staff->nic_no ? $staff->nic_no : $staff->passport_no}}</td> --}}
                             <td>{{$staff->gender}}</td>
+                            <td>{{$staff->Qualification}}</td>
                             <td>{{$staff->is_active==0?"Not Active":"Active"}} </td>
                             <td>{{$staff->role->name}}</td>
                             <td>{{$staff->created_at }} </td>

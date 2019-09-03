@@ -61,7 +61,7 @@
         <div class="collapse navbar-collapse" id="navCollapse">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link">link 1</a>
+                <a class="nav-link" href="{{ url('/admin')}}">Admin panal</a>
             </li>
 
             <li class="nav-item">

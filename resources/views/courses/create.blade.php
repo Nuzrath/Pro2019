@@ -58,6 +58,14 @@
 
                     </div>
 
+                    <div class="form-group">
+
+                        {!! Form::label('admission_fee', 'Admission Fee :' ) !!}
+
+                        {!! Form::text('admission_fee', null, ['class'=>'form-control']) !!}
+
+                </div>
+
 
                     <div class="form-group">
                         {!! Form::submit('Add Course') !!}

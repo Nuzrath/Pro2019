@@ -28,6 +28,7 @@ class SubjectController extends Controller
     public function create()
     {
         //
+        return view('subjects.create');
     }
 
     /**
@@ -39,6 +40,19 @@ class SubjectController extends Controller
     public function store(Request $request)
     {
         //
+        $this->validate($request,[
+            'subject_id'=>'bail|required',
+            'subject_name'=>'required',
+
+        ]);
+
+            $subjects = new Subject;
+            $subjects->subject_id = $request->input('subject_id');
+            $subjects->subject_name = $request->input('subject_name');
+            $subjects->save();
+            return redirect(route('subject.index'))->with('response','subject created successfully');
+
+
     }
 
     /**

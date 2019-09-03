@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Staff;
 use App\User;
 use App\Role;
+use App\Http\Requests\StaffRequest;
 
 
 class StaffController extends Controller
@@ -41,10 +42,39 @@ class StaffController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+
+     //vqlidation reference - https://laravel.com/docs/5.7/validation#introduction
+    public function store(StaffRequest $request)
     {
         //
-        $input=$request->all();
+        $staffs = new Staff;
+
+        $staffs->fname = $request->input('fname');
+        $staffs->lname = $request->input('lname');
+        $staffs->address = $request->input('address');
+        $staffs->country = $request->input('country');
+        $staffs->dob = $request->input('dob');
+        $staffs->contact1 = $request->input('contact1');
+        $staffs->contact2 = $request->input('contact2');
+        $staffs->nic_no = $request->input('nic_no');
+
+        $staffs->passport_no = $request->input('passport_no');
+        $staffs->gender = $request->input('gender');
+        $staffs->email = $request->input('email');
+
+         $staffs->qualification = $request->input('qualification');
+         $staffs->certificates_img = $request->input('certificates_img');
+         $staffs->is_active = $request->input('is_active');
+         $staffs->staff_pic = $request->input('staff_pic');
+         $staffs->role_id = $request->input('role_id');
+
+         $staffs->save();
+        return redirect(route('staff.index'))->with('response','staff created successfully');
+
+
+
+
+
     }
 
     /**

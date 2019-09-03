@@ -12,6 +12,8 @@
         <div class="col-md-12 mx-auto mt-5">
             {{--  col md start  --}}
 
+            @include('inc.form_error')
+
             <div class="panel panel-default">
                 {{--  panel default start  --}}
 
