@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Course List - admin view')
+@section('title', 'Contact Client List - Admin view')
 
 @section('content')
 
@@ -18,7 +18,7 @@
                 {{--  panel default start  --}}
 
                 <div class="panel panel-heading">
-                    <h3>Course List</h3>
+                    <h3>Contact Form Detail List</h3>
 
                 </div>
 
@@ -30,26 +30,31 @@
                       <thead>
                         <tr>
                           <th>Serial No</th>
-                          <th>Couse ID</th>
-                          <th>Course Name</th>
-                          <th>Course Amount</th>
-                          <th>Duration</th>
+                          <th>Name</th>
+                          <th>Contact No</th>
+                          <th>Email</th>
+                          <th>Request Course</th>
+                          {{-- <th>Status</th> Shoule check this details --}}
+                          <th>Comment</th>
                           <th>Created At</th>
                           <th>Updated</th>
                         </tr>
                       </thead>
                       <tbody>
-                        @if($courses)
-                            @foreach($courses as $course)
+                        @if($contacts)
+                            @foreach($contacts as $contact)
                             <tr>
-                            <td>{{$course->id}}</td>
-                            <td>{{$course->course_id}}</td>
-                            <td><a href="{{ route('course.edit', $course->id)}}">{{$course->course_name }}</a></td>
-                            <td>{{$course->course_fee }} </td>
-                            <td>{{$course->duration }} </td>
-                            <td>{{$course->created_at }} </td>
+                            <td>{{$contact->id}}</td>
+                            <td>{{$contact->name}}</td>
+                            <td><a href="{{ route('course.edit', $contact->id)}}">{{$contact->name }}</a></td>
+                            <td>{{$contact->contact_no }} </td>
+                            <td>{{$contact->email }} </td>
+                            <td>{{$contact->course }} </td>
+                            <td>{{$contact->comment}} </td>
+
+                            <td>{{$contact->created_at }} </td>
                                 {{-- ->format('d/m/y')}}</td> --}}
-                            <td>{{$course->updated_at }}  </td>
+                            <td>{{$contact->updated_at }}  </td>
                                 {{-- ->diffForHumans()}}</td> --}}
 
                             @endforeach

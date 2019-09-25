@@ -97,6 +97,9 @@ class StaffController extends Controller
     public function edit($id)
     {
         //
+        $staff = Staff::findOrFail($id);
+        $roles =Role::pluck ('name','id')->all();
+        return view('staffs.edit', compact('staff','roles'));
     }
 
     /**
@@ -109,6 +112,12 @@ class StaffController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $staff = Staff::findOrFail($id);
+        $input = $request->all();
+
+        $staff->update($input);
+
+        return redirect(route(staff.index))->with('response','Staff Updated Successfully');
     }
 
     /**

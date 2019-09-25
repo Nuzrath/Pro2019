@@ -14,7 +14,9 @@ class ContactController extends Controller
      */
 
     public function index(){
-		return view('contacts.form');
+        $contacts = Contact::all();
+        return view('contacts.list',compact('contacts'));
+
 	}
 
 	 /* ===== Unit Test 1 - success =======
@@ -58,7 +60,7 @@ class ContactController extends Controller
 
     public function create()
     {
-        //
+        return view('contacts.form');
     }
 	public function store(Request $request){
 
@@ -79,7 +81,7 @@ class ContactController extends Controller
 		$contact->course = $request->input('course');
 		$contact->comment = $request->input('comment');
 		$contact->save();
-		return redirect('/contact')->with('response','contact added sucessfully');
+		return redirect('/contact')->with('response','Your Request Sent Successfully, Thank you!');
 	}
 
 

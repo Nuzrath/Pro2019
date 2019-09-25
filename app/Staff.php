@@ -9,6 +9,8 @@ class Staff extends Model
     public $table = "staffs";
     protected $primaryKey = 'staff_id';
 
+    protected $fillable = ['fname', 'lname', 'address', 'country', 'dob', 'contact1', 'contact2', 'nic_no','passport_no',
+    'gender', 'qualification', 'certificates_img', 'is_active', 'body'];
 /**
      * Get the Staff that has a Role.
      *
