@@ -5,6 +5,7 @@ use App\Role;
 use App\Subject;
 use App\Staff;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,6 +31,9 @@ Route::resource('/course', 'CourseController');
 Route::resource('/classroom', 'RoomController');
 
 Route::resource('/staff', 'StaffController');
+
+//Staff_Subject many to many DB access using TeacherController
+Route::resource('/teacher','TeacherController');
 
 
 Route::resource('/student', 'StudentController');

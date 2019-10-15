@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Staff;
+use App\Subject;
+use App\Teacher;
+
 use Illuminate\Http\Request;
-use App\Student;
 
-
-class StudentController extends Controller
+class TeacherController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +18,11 @@ class StudentController extends Controller
     public function index()
     {
         //
-         //students Details available here
-         $students=Student::all();
-         return view('students.index', compact('students'));
+      //  $staff = Staff::all();
+       // $subjects = Subject::all();
+       $teachers=Teacher::all();
+
+        return view('admin.teacher.index', compact('teachers'));
     }
 
     /**
@@ -29,7 +33,13 @@ class StudentController extends Controller
     public function create()
     {
         //
-        return view('students.create');
+        $staffs =Staff::pluck ('lname','staff_id')->all();
+
+        $subjects=Subject::pluck('subject_name', 'subject_id')->all();
+
+
+
+        return view('admin.teacher.create', compact('staffs','subjects'));
     }
 
     /**
@@ -41,7 +51,6 @@ class StudentController extends Controller
     public function store(Request $request)
     {
         //
-        return $request->all(); //1st check success sending information
     }
 
     /**
@@ -64,8 +73,6 @@ class StudentController extends Controller
     public function edit($id)
     {
         //
-        $student = Student::findOrFail($id);
-        return view('students.edit', compact('student'));
     }
 
     /**
@@ -78,12 +85,6 @@ class StudentController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $student = Student::findOrFail($id);
-        $input = $request->all();
-
-        $student->update($input);
-
-        return redirect(route(student.index))->with('response','Student updated succesfully');
     }
 
     /**

@@ -62,13 +62,13 @@ class StaffController extends Controller
         $staffs->gender = $request->input('gender');
         $staffs->email = $request->input('email');
 
-         $staffs->qualification = $request->input('qualification');
-         $staffs->certificates_img = $request->input('certificates_img');
-         $staffs->is_active = $request->input('is_active');
-         $staffs->staff_pic = $request->input('staff_pic');
-         $staffs->role_id = $request->input('role_id');
+        $staffs->qualification = $request->input('qualification');
+        $staffs->certificates_img = $request->input('certificates_img');
+        $staffs->is_active = $request->input('is_active');
+        $staffs->staff_pic = $request->input('staff_pic');
+        $staffs->role_id = $request->input('role_id');
 
-         $staffs->save();
+        $staffs->save();
         return redirect(route('staff.index'))->with('response','staff created successfully');
 
 
@@ -117,7 +117,7 @@ class StaffController extends Controller
 
         $staff->update($input);
 
-        return redirect(route(staff.index))->with('response','Staff Updated Successfully');
+        return redirect(route('staff.index'))->with('response','Staff Updated Successfully');
     }
 
     /**

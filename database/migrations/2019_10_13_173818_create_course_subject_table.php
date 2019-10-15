@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateStaffSubjectTable extends Migration
+class CreateCourseSubjectTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateStaffSubjectTable extends Migration
      */
     public function up()
     {
-        Schema::create('staff_subject', function (Blueprint $table) {
-
+        Schema::create('course_subject', function (Blueprint $table) {
             $table->increments('id');
-
-            $table->integer('staff_id')->unsigned();
-            $table->foreign('staff_id')->references('id')->on('staffs');
+            $table->string('course_id')->unsigned();
+            $table->foreign('course_id')->references('id')->on('courses');
 
             $table->integer('subject_id')->unsigned();
             $table->foreign('subject_id')->references('id')->on('subjects');
@@ -33,6 +31,6 @@ class CreateStaffSubjectTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('staff_subject');
+        Schema::dropIfExists('course_subject');
     }
 }

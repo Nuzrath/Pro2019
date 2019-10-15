@@ -8,9 +8,14 @@ class Subject extends Model
 {
     //
  //a staff has one more subjects , a subjects belogst to many Staff MANY TO MANY RELATIONSHIP
-//    public function staffs()
-//    {
-//        return $this->belongsToMany('App\Staff', 'staff_subject', 'staff_id', 'subject_id');
-//    }
+   public function staffs()
+   {
+       return $this->belongsToMany('App\Staff');// 'staff_subject', 'staff_id', 'subject_id');
+   }
+
+   public function teachers()
+   {
+       return $this->belongsToMany('App\Teacher');// 'staff_subject', 'staff_id', 'subject_id');
+   }
 
 }
