@@ -105,11 +105,5 @@
 <!-- custom link from public folder -->
 <script src="{!! asset('custom/js/custom.js')  !!}"></script>
 
-
-
-
-
-
-
 </body>
 </html>

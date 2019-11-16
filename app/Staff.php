@@ -35,17 +35,11 @@ class Staff extends Model
             return $this->hasOne('App\User');
         }
 
-  //a staff has one more subjects , a subjects belogst to many Staff
+  //a staff has one more subjects , a subjects has one or more to many Staff
+  //many to many
     public function subjects()
         {
             return $this->belongsToMany('App\Subject');// 'staff_subject', 'staff_id', 'subject_id');
-        }
-
-//to combine Staff to Subject through teacher model
-//therefore teacher hasone staff
-        public function teacher()
-        {
-            return $this->hasOne('App\Teacher');
         }
 
 

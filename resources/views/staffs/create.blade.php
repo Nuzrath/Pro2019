@@ -14,12 +14,12 @@
 		<div class="alert alert-danger">{{ $error }}</div>
 			@endforeach
 		@endif
-	<!---
+	{{-- <!---
 	===if successfully added to db ====
-	this is will pop up msg from StaffControll@store method
+	this will pop up msg from StaffControll@store method
 	return redirect('/create')->with('response','Staff added sucessfully');
 
-	-->
+	--> --}}
 		@if(session('response'))
 			<div class="alert alert-success"> {{ session('response') }}</div>
 

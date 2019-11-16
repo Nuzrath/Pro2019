@@ -69,6 +69,8 @@ class CourseController extends Controller
     public function show($id)
     {
         //
+        $courses = Course::findOrFail($id);
+        return view('courses.show', compact('courses'));
     }
 
     /**

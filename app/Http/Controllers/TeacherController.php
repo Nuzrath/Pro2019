@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+
+
+
 use App\Staff;
 use App\Subject;
 use App\Teacher;
 
-use Illuminate\Http\Request;
+
+// use Illuminate\Http\Request;
 
 class TeacherController extends Controller
 {
@@ -48,9 +53,25 @@ class TeacherController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Requests\StaffRequest $request)
     {
         //
+         //return $request->all(); //1st check success sending information
+        //  $input =$request->all(); nother way
+        $teachers= Subject::findOrFail($subject_id);
+        $teachers = Staff::findOrFail($staff_id);
+
+        $teachers->staff_id = $request->input('staff_id');
+        $teachers->subject_id = $request->input('subject_id');
+
+
+        $teachers->save();
+
+        // $teachers=Staff;
+        // $teacher->subjects()->sync($request->subjects, false);
+
+        return redirect(route('teacher.index'))->with('response','successfully create Teacher subject Relationship');
+
     }
 
     /**

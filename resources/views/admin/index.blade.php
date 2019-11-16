@@ -39,8 +39,8 @@
                             <br>
 
                             <h2> STAFF SUBJECT Relationship Display</h2>
-                            <a name="" id="" class="btn btn-primary" href="{{ route('teacher.index')  }}" role="button"> Teacher (Subject Teacher) List</a>
-                            <a name="" id="" class="btn btn-primary" href="{{ route('teacher.create')  }}" role="button"> Create Subject </a>
+                            <a name="" id="" class="btn btn-primary" href="#" role="button"> Teacher (Subject Teacher) List</a>
+                            <a name="" id="" class="btn btn-primary" href="#" role="button"> Create Subject </a>
 
 
                             <br>
@@ -65,7 +65,7 @@
                             <h2> COURSE </h2>
                             <a name="" id="" class="btn btn-primary" href="{{ route('course.index')  }}" role="button"> Course List </a>
                             <a name="" id="" class="btn btn-primary" href="{{ route('course.create')  }}" role="button"> Create Course </a>
-                            <a name="" id="" class="btn btn-primary" href="#" role="button"> Delete Course </a>
+                            <a name="" id="" class="btn btn-primary" href="#" role="button"> Show Course </a>
 
                             <br>
                             <br>

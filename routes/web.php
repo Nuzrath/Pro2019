@@ -33,7 +33,7 @@ Route::resource('/classroom', 'RoomController');
 Route::resource('/staff', 'StaffController');
 
 //Staff_Subject many to many DB access using TeacherController
-Route::resource('/teacher','TeacherController');
+// Route::resource('/teacher','TeacherController');
 
 
 Route::resource('/student', 'StudentController');

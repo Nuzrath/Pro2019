@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Course List - admin view')
+@section('title', 'Course Show add Subjects - admin view')
 
 @section('content')
 
@@ -44,14 +44,14 @@
                             <tr>
                             <td>{{$course->id}}</td>
                             <td>{{$course->course_id}}</td>
-                            <td><a href="{{ route('course.edit', $course->id)}}">{{$course->course_name }}</a></td>
+                            {{-- <td><a href="{{ route('course.edit', $course->id)}}">{{$course->course_name }}</a></td> --}}
+                            <td> {{$course->course_name }} <td>
                             <td>{{$course->course_fee }} </td>
                             <td>{{$course->duration }} </td>
                             <td>{{$course->created_at }} </td>
                                 {{-- ->format('d/m/y')}}</td> --}}
                             <td>{{$course->updated_at }}  </td>
                                 {{-- ->diffForHumans()}}</td> --}}
-                            <td> <a href="{{ route('course.show', $course->id)  }}"> Show </a>
 
                             @endforeach
                             @endif
