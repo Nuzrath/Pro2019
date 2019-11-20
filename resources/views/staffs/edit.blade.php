@@ -14,7 +14,7 @@
 
 
 
-        {!! Form::model($staff, ['method'=>'PATCH', 'action'=> ['StaffController@update', $staff->staff_id]] ) !!}
+        {!! Form::model($staff, ['method'=>'PATCH', 'action'=> ['StaffController@update', $staff->id]] ) !!}
 
         <div class="form-group">
             {!! Form::label('fname', 'First Name:', ['class' => 'col-lg-2 control-label']) !!}

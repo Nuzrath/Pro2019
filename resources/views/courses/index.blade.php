@@ -51,7 +51,8 @@
                                 {{-- ->format('d/m/y')}}</td> --}}
                             <td>{{$course->updated_at }}  </td>
                                 {{-- ->diffForHumans()}}</td> --}}
-                            <td> <a href="{{ route('course.show', $course->id)  }}"> Show </a>
+                            {{-- <td> <a href="course/{{$course->id}}"> Show </a> --}}
+                            <td> <a href="{{ route('course.show', $course->id)  }}"> Show </a> </td>
 
                             @endforeach
                             @endif

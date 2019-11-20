@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Staff extends Model
 {
     public $table = "staffs";
-    protected $primaryKey = 'staff_id';
+    protected $primaryKey = 'id';
 
     protected $fillable = ['fname', 'lname', 'address', 'country', 'dob', 'contact1', 'contact2', 'nic_no','passport_no',
     'gender', 'qualification', 'certificates_img', 'is_active', 'body'];
@@ -39,7 +39,7 @@ class Staff extends Model
   //many to many
     public function subjects()
         {
-            return $this->belongsToMany('App\Subject');// 'staff_subject', 'staff_id', 'subject_id');
+            return $this->belongsToMany('App\Subject','staff_subject');// 'staff_subject', 'staff_id', 'subject_id');
         }
 
 

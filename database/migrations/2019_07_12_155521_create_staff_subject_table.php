@@ -15,12 +15,10 @@ class CreateStaffSubjectTable extends Migration
     {
         Schema::create('staff_subject', function (Blueprint $table) {
 
-            $table->increments('id');
-
-            $table->integer('staff_id')->unsigned();
+            $table->integer('staff_id')->unsigned()->index();
             $table->foreign('staff_id')->references('id')->on('staffs');
 
-            $table->integer('subject_id')->unsigned();
+            $table->integer('subject_id')->unsigned()->index();
             $table->foreign('subject_id')->references('id')->on('subjects');
             $table->timestamps();
         });

@@ -6,12 +6,24 @@ use Illuminate\Database\Eloquent\Model;
 
 class Subject extends Model
 {
+    public $table = "subjects";
+    protected $primaryKey = 'id';
+
+    protected $fillable = ['subject_name'];
+
+
+
+
+
     //
  //a staff has one more subjects , a subjects has one or more to many Staff
   //many to many
+
+
+
    public function staffs()
    {
-       return $this->belongsToMany('App\Staff');// 'staff_subject', 'staff_id', 'subject_id');
+       return $this->belongsToMany('App\Staff','staff_subject')->withTimestamps(); // ,'staff_subject','staff_id', 'subject_id');
    }
 
 //a Course has one more subjects , a subjects has one or more  Course

@@ -83,9 +83,23 @@ class StaffController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Staff $staff)
     {
         //
+
+        $staff = Staff::findOrFail($staff->id);
+
+        // $user = App\User::find(1);
+
+        // foreach ($user->roles as $role) {
+        //     echo $role->pivot->created_at;
+        // }
+
+        return view('staffs.show', compact('staff'));
+        // $staff = Staff::where('id', $staff->id );
+
+
+
     }
 
     /**

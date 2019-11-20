@@ -51,13 +51,12 @@ Route::get('/admin','AdminController@index');
 // });
 
 
-Route::get('/staff/{staff}/subject', function($id){
+Route::get('/read', function(){
 
-    $staff = Staff::find($id);
+    $staff = App\Staff::find(1);
 
-    foreach ($staff->subjects as $subject) {
-
-        echo $subject->name ."<br/>";
+    foreach ($staff->students as $student) {
+        echo $student->pivot->created_at;
     }
 
 });

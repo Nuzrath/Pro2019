@@ -58,7 +58,7 @@
                             @foreach($staffs as $staff)
                             <tr>
                             <td>{{$staff->staff_id}}</td>
-                            <td><a href="{{ route('staff.edit', $staff->staff_id)}}">{{$staff->fname . " " .$staff->lname}}</a></td>
+                            <td><a href="{{ route('staff.edit', $staff->id)}}">{{$staff->fname . " " .$staff->lname}}</a></td>
                             <td>{{$staff->address .", " .$staff->country}}</td>
                             <td>{{$staff->email}}</td>
                             {{-- <td>{{$staff->dob}}</td> --}}
@@ -73,14 +73,13 @@
                                 {{-- ->format('d/m/y')}}</td> --}}
                             <td>{{$staff->updated_at }}  </td>
                                 {{-- ->diffForHumans()}}</td> --}}
+                            <td><a href="{{ route('staff.show', $staff->id) }}">Show relationship</a></td>
 
                             @endforeach
                             @endif
                             </tr>
                       </tbody>
                     </table>
-                    {{--  panel body end  --}}
-
                     </div>
 
 

@@ -14,11 +14,11 @@ class CreateCourseSubjectTable extends Migration
     public function up()
     {
         Schema::create('course_subject', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('course_id')->unsigned();
+
+            $table->integer('course_id')->unsigned()->nullable()->index();
             $table->foreign('course_id')->references('id')->on('courses');
 
-            $table->integer('subject_id')->unsigned();
+            $table->integer('subject_id')->unsigned()->nullable()->index();
             $table->foreign('subject_id')->references('id')->on('subjects');
             $table->timestamps();
         });
