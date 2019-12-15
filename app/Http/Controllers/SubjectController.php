@@ -41,13 +41,13 @@ class SubjectController extends Controller
     {
         //
         $this->validate($request,[
-            'subject_id'=>'bail|required',
+            'id'=>'bail|required',
             'subject_name'=>'required',
 
         ]);
 
             $subjects = new Subject;
-            $subjects->subject_id = $request->input('subject_id');
+            $subjects->id = $request->input('id');
             $subjects->subject_name = $request->input('subject_name');
             $subjects->save();
             return redirect(route('subject.index'))->with('response','subject created successfully');
@@ -61,9 +61,14 @@ class SubjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Subject $subject)
     {
         //
+
+        $subject = Subject::findOrFail($subject->id);
+
+        return view('subjects.show', compact('subject'));
+
     }
 
     /**
@@ -75,6 +80,11 @@ class SubjectController extends Controller
     public function edit($id)
     {
         //
+        //dd($id);
+        $subject = Subject::findOrFail($id);
+        return view('subjects.edit', compact('subject'));
+
+        
     }
 
     /**
@@ -87,6 +97,12 @@ class SubjectController extends Controller
     public function update(Request $request, $id)
     {
         //
+         $subject = Subject::findOrFail($id);
+         $input = $request->all();
+        
+         $subject->update($input);
+
+        return redirect(route('subject.index'))->with('response','Subject Updated Successfully! ');
     }
 
     /**
@@ -95,8 +111,15 @@ class SubjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Subject $subject)
     {
-        //
+        //checking purpose passing in array Success
+        //dd($subject);
+        $subject = Subject::find($subject->id);
+        $subject->delete();
+
+        // redirect
+        return redirect(route('subject.index'))->with('response','Successfully deleted the subject!');
+
     }
 }

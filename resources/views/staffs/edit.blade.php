@@ -1,5 +1,5 @@
-@extends('layouts.admin');
-@section('Title', 'Staff edit Form')
+@extends('layouts.admin')
+@section('title', 'Staff edit Form-Admin View')
 
 @section('content')
 
@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col-md-12">
 
-        @include('inc.form_error')
+      {{-- //  @include('inc.form_error') --}}
 
 
 

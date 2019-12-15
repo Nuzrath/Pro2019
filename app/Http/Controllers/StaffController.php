@@ -8,7 +8,7 @@ use App\Staff;
 use App\User;
 use App\Role;
 use App\Http\Requests\StaffRequest;
-
+use Illuminate\Support\Facades\Redirect;
 
 class StaffController extends Controller
 {
@@ -140,8 +140,17 @@ class StaffController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Staff $staff)
     {
         //
+        //dd($staff);
+
+        $staff = Staff::find($staff->id);
+        $staff->delete();
+
+        // redirect    
+         
+         return redirect(route('staff.index'))->with('response','Successfully deleted the subject!');
+
     }
 }

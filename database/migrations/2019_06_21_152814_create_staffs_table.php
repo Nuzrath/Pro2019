@@ -14,12 +14,12 @@ class CreateStaffsTable extends Migration
     public function up()
     {
         Schema::create('staffs', function (Blueprint $table) {
-            $table->increments('staff_id')->index()->unique()->autoIncrement();
-			$table->string('fname')->default('M');
-			$table->string('lname')->default('lal');
+            $table->increments('id')->index()->unique()->autoIncrement();
+			$table->string('fname');
+			$table->string('lname');
 			$table->string('address')->nullable();
 			$table->string('country')->default('Sri Lanka');
-			$table->date('dob')->default('1992.05.03');
+			$table->date('dob');
 			$table->integer('contact1');
 			$table->integer('contact2')->nullable();
 			$table->string('nic_no')->default('5555555555V');

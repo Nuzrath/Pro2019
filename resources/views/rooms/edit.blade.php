@@ -23,7 +23,7 @@
                 <div class="panel panel-body">
                     {{--  panel Body working space start  --}}
 
-                    {!! Form::model($course, ['method'=>'PATCH', 'action'=> ['RoomController@update', $rooms->id]] ) !!}
+                    {!! Form::model($rooms, ['method'=>'PATCH', 'action'=> ['RoomController@update', $rooms->id]] ) !!}
 
                     <div class="form-group">
 

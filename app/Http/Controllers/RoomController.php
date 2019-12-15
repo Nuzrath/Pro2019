@@ -102,8 +102,15 @@ class RoomController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Room $room)
     {
-        //
+        //Check 1 test
+        dd($room);
+
+        // $room = Room::find($room->id);
+        // $room->delete();
+
+        // return redirect(route('classroom.index'))->with('response', 'Successfully deleted the Class Room!');
+
     }
 }

@@ -28,6 +28,7 @@ class CourseController extends Controller
     public function create()
     {
         //
+        return view('courses.create');
     }
 
     /**
@@ -49,7 +50,8 @@ class CourseController extends Controller
      */
     public function show(Course $course)
     {
-        //
+        //check 
+        // dd('$course');
         // $course = Course::where('id', $course->id );
 
          $course = Course::findOrFail($course->id);
@@ -87,6 +89,11 @@ class CourseController extends Controller
      */
     public function destroy(Course $course)
     {
-        //
-    }
+        //test array passing 
+        //dd($course);
+        $course = Course::find($course->id);
+        $course->delete();
+
+        return redirect(route('course.index'))->with('response', 'Successfully deleted the subject!');
+}
 }

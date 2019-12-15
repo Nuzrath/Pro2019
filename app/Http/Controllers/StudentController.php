@@ -53,6 +53,7 @@ class StudentController extends Controller
     public function show($id)
     {
         //
+
     }
 
     /**
@@ -83,7 +84,7 @@ class StudentController extends Controller
 
         $student->update($input);
 
-        return redirect(route(student.index))->with('response','Student updated succesfully');
+        return redirect(route('student.index'))->with('response','Student updated succesfully');
     }
 
     /**
@@ -92,8 +93,9 @@ class StudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Student $student)
     {
         //
+        dd($student);
     }
 }

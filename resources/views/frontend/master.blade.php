@@ -60,5 +60,11 @@ src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
 <!--END  bootstrap 4 cdn links -->
 <link rel="stylesheet" href="{{  url('css/mystyle.css')  }}">
 
+<script type="javascript">
+    document.onsubmit=function(){
+        return confirm(' Are you sure that you want to delete?');
+    }
+</script>
+
 </body>
 </html>

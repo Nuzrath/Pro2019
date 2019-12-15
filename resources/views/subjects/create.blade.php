@@ -27,9 +27,9 @@
 
                     <div class="form-group">
 
-                        {!! Form::label('subject_id', 'Subject ID :' ) !!}
+                        {!! Form::label('id', 'Subject ID :' ) !!}
 
-                        {!! Form::text('subject_id', null, ['class'=>'form-control']) !!}
+                        {!! Form::text('id', null, ['class'=>'form-control']) !!}
 
                     </div>
 

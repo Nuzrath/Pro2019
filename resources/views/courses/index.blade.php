@@ -16,16 +16,20 @@
 
             <div class="panel panel-default">
                 {{--  panel default start  --}}
+               
 
                 <div class="panel panel-heading">
-                    <h3>Course List</h3>
+                    <h3>Course List
+                        <a class="btn btn-small btn-success float-right" href="{{ route('course.create')}}">  Add Course</a>
+                        <br/>
+                    </h3>
 
                 </div>
 
                 <div class="panel panel-body">
                     {{--  panel Body working space start  --}}
 
-                    <p>Course Details table</p>
+                  
                     <table class="table">
                       <thead>
                         <tr>
@@ -52,7 +56,19 @@
                             <td>{{$course->updated_at }}  </td>
                                 {{-- ->diffForHumans()}}</td> --}}
                             {{-- <td> <a href="course/{{$course->id}}"> Show </a> --}}
-                            <td> <a href="{{ route('course.show', $course->id)  }}"> Show </a> </td>
+                           
+                            <td>  <a class="btn btn-info" href="{{ route('course.show', $course->id )}}">Show</a></td>
+                            <td> <a class="btn btn-primary" href="{{route('course.edit',$course->id)}}">Edit</a></td>
+                            
+                            
+                            <td> 
+                                <form action="{{ route('course.destroy', $course->id) }}" method="POST">
+                                {{ csrf_field() }}
+                                {{ method_field('DELETE') }}
+                                <button type="submit" class="btn btn-danger" onclick="retrun myFunction();">delete</button>
+                                </form>
+                            @include('inc.delconfirm')
+                            </td>
 
                             @endforeach
                             @endif
